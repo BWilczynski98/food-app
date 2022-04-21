@@ -6,12 +6,18 @@ const ItemForm = ({ title, desc, price }) => {
     return (
         <>
             <div className={styles.wrapper}>
-                <div>
-                    <h3>Title</h3>
-                    <p>decsacwqcqwcqwcq d wqd d qwd qc </p>
-                    <h3>$22.99</h3>
+                <div className={styles['dish-details']}>
+                    <div>
+                        <h3>{title}</h3>
+                    </div>
+                    <div>
+                        <p>{desc}</p>
+                    </div>
+                    <div>
+                        <span className={styles.price}><h3>${price}</h3></span>
+                    </div>
                 </div>
-                <div>
+                <div className={styles['dish-cart-details']}>
                     <div className={styles['container-amount']}>
                         <label className={styles.label}>Amount</label>
                         <input type='number' className={styles.input} />

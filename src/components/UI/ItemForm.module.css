@@ -1,10 +1,19 @@
 .wrapper {
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px auto;
+    border-bottom: 1px solid rgb(187, 187, 187);
 }
 
-.container-amount {}
+.dish-details div {
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #b15e22
+}
 
 .label {
     font-weight: bold;
@@ -12,5 +21,19 @@
 
 .input {
     width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 2px;
+}
 
+.input:focus {
+    outline: none;
+}
+
+.dish-cart-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px
 }

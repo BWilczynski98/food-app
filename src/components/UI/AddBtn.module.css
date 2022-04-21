@@ -1,6 +1,9 @@
 .button {
-    color: white;
-    background-color: #7f2607;
+    padding: 8px 30px;
     border: none;
-
+    border-radius: 20px;
+    background-color: #7f2607;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
