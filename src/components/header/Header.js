@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from './Header.module.css';
 import { HiShoppingCart } from 'react-icons/hi';
 import mealsImage from '../../assets/meals.jpg'
+import { Dish } from '../../store/VariablesStorage';
 
 const Header = () => {
+    const [DUMMY_DISH, userCart] = useContext(Dish);
+
     return (
         <>
             <div className={styles.wrapper}>
@@ -19,7 +22,7 @@ const Header = () => {
                             <h4>Your Cart</h4>
                         </div>
                         <div className={styles['box-count-items']}>
-                            <h4>5</h4>
+                            <h4>{userCart.length}</h4>
                         </div>
                     </div>
                 </div>

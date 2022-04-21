@@ -3,6 +3,11 @@ import styles from './ItemForm.module.css';
 import AddBtn from './AddBtn';
 
 const ItemForm = ({ title, desc, price }) => {
+
+    const checkTitle = () => {
+        console.log(title);
+    }
+
     return (
         <>
             <div className={styles.wrapper}>
@@ -11,7 +16,7 @@ const ItemForm = ({ title, desc, price }) => {
                         <h3>{title}</h3>
                     </div>
                     <div>
-                        <p>{desc}</p>
+                        <span className={styles.desc}><p>{desc}</p></span>
                     </div>
                     <div>
                         <span className={styles.price}><h3>${price}</h3></span>
@@ -22,7 +27,7 @@ const ItemForm = ({ title, desc, price }) => {
                         <label className={styles.label}>Amount</label>
                         <input type='number' className={styles.input} />
                     </div>
-                    <AddBtn />
+                    <AddBtn checkTitle={checkTitle} />
                 </div>
             </div>
         </>

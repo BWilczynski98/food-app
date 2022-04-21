@@ -7,3 +7,7 @@
     font-weight: bold;
     text-align: center;
 }
+
+.button:hover {
+    cursor: pointer;
+}
